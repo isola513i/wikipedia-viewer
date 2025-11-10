@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale-1.0" />
+		<title>Wikipedia Viewer</title>
+		<link rel="stylesheet" href="styles.css" />
+		<script src="script.js" defer></script>
+	</head>
+	<body>
+		<div class="container">
+			<a
+				class="random-btn"
+				href="https://en.wikipedia.org/wiki/Special:Random"
+				target="_blank"
+				rel="noopener"
+			>
+				Click here for a random article
+			</a>
+
+			<div class="search-container" id="search-container">
+				<div class="search-icon-state" id="search-icon-state">
+					<button class="icon-btn" id="icon-btn" aria-label="Open Search">
+						<svg
+							xmlns="http://www.w3.org/2000/svg"
+							width="48"
+							height="48"
+							viewBox="0 0 24 24"
+							fill="none"
+							stroke="currentColor"
+							stroke-width="2.5"
+							stroke-linecap="round"
+							stroke-linejoin="round"
+						>
+							<circle cx="11" cy="11" r="8"></circle>
+							<line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+						</svg>
+					</button>
+					<p class="search-hint" id="search-hint">Click icon to search</p>
+				</div>
+
+				<form class="search-form" id="search-form">
+					<input
+						type="search"
+						id="search-input"
+						class="search-input"
+						placeholder="Search Wikipedia..."
+						autocomplete="off"
+					/>
+					<button
+						type="button"
+						class="close-btn"
+						id="close-btn"
+						aria-label="Close Search"
+					>
+						&times;
+					</button>
+				</form>
+			</div>
+
+			<main class="results-container" id="results-container">
+				<p class="status-message" id="status-message"></p>
+			</main>
+		</div>
+	</body>
+</html>
